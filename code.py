@@ -59,7 +59,7 @@ dps310 = adafruit_dps310.DPS310(board.I2C())
 
 loop_count=0
 while True:
-    loop_count = loop_count+1 % 60
+    loop_count = (loop_count+1) % 60
     backlight.value = select.value
     if (loop_count % 10 == 0):
         print("\nAHTTemperature: %0.1f C" % sensor.temperature)
